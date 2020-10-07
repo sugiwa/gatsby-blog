@@ -15,7 +15,8 @@ export default () =>(
               <desc>ESSENTIALS</desc>
               <path
                 fill='#477294'
-                d='M52.6 25.36h8 2.33-2.33z' 
+                d='M52.6 25.36
+                   h8 2.33 2.33z' 
               />
           </svg>
         </Link>
