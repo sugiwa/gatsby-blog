@@ -35,8 +35,16 @@ module.exports = {
         theme_color: `#477294`,
         display: `standalone`,
         icon: `src/images/icon.png`,
-      }
+      },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `yogly1cmx2lv`,
+        accessToken: `URY2Q5qGFRJDmRWcUCgtRu8iskBMdfsBUkkB1TBeaas`,
+        host: `cdn.contentful.com`,
+      },
+    },
   ],
 }
