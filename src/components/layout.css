@@ -43,7 +43,6 @@ svg {
 
 .nav, 
 .catch h1, 
-.food h2, 
 .detail p:first-of-type,
 .info .subtitle {
 	font-family: 'Avenir Next', 'Segoe UI', Helvetica, sans-serif;
@@ -69,6 +68,10 @@ svg {
 	height: 134px;
 	text-align: center;
 }
+.header {
+	background-color: #000000;
+	color: #ffffff;
+}
 
 .nav ul {
 	display: flex;
@@ -76,6 +79,7 @@ svg {
 	list-style: none;
 	margin-top: 18px;
 	color: #477294;
+	font-size: 120%;
 }
 
 .nav li:not(:last-child) {
@@ -161,23 +165,7 @@ svg {
 	}
 }
 
-
-/* フード */
-.food {
-	padding: 30px 0;
-	text-align: center;
-}
-
-.food h2 {
-	color: #477294;
-	margin-bottom: 20px;
-	font-size: 36px;
-}
-.food h2 span {
-	font-weight: normal;
-}
-
-/* フード詳細 */
+/*詳細 */
 .detail {
 	margin-bottom: 50px;
 }
@@ -225,6 +213,7 @@ svg {
 .bar {
 	padding-bottom: 16px;
 	position: relative;
+	text-align: center;
 }
 .bar::before,
 .bar::after {
@@ -337,6 +326,7 @@ svg {
 /* SNSメニュー */
 .sns {
 	display: flex;
+	margin: 0 auto;
 	list-style: none;
 	font-size: 40px;
 }
@@ -362,19 +352,16 @@ svg {
 }
 
 .postbody > * {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
-.postbody h2 {
-	margin-top: 2.5em;
-	margin-bottom: 1.5em;
-	font-size: 20px;
-}
-.postbody h2 [class*="fa-"] {
-	margin-right: 15px;
-	color: #477294;
+
+.postbody h4{
+	font-size: 150%;
+	text-align: center;
 }
 
 .postbody p {
+	font-size: 1.2rem;
 	line-height: 1.8;
 }
 .postbody ul {
@@ -382,6 +369,12 @@ svg {
 }
 .postbody li:not(:last-child) {
 	margin-bottom: 1em;
+}
+
+.skill{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -393,10 +386,6 @@ svg {
 	.content h1 {
 		margin-bottom: 40px;
 		font-size: 38px;
-	}
-
-	.postbody h2 {
-		font-size: 28px;
 	}
 }
 
@@ -487,19 +476,19 @@ svg {
 .posts {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
 .posts article {
-	width: 48%;
+	width: 80%;
 	margin-bottom: 20px;
 }
 
 .posts figure {
 	max-width: 100%;
-	height: 150px;
+	height: 80%;
 }
 
 .posts img {
@@ -507,13 +496,16 @@ svg {
 	object-fit: cover;
 }
 .posts h3 {
-	margin-top: 10px;
 	font-size: 14px;
 }
 
 @media (min-width: 768px) {
 	.posts h3 {
 		font-size: 16px;
+	}
+
+	.posts article{
+		width: 48%;
 	}
 
 	.posts figure {

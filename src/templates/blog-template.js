@@ -10,12 +10,12 @@ export default ({data, location, pageContext}) => (
     <Layout>
         <SEO 
             pagetitle='ブログ'
-            pagedesc='ESSENTIALのブログ'
+            pagedesc='Ryoのブログ'
             pagepath={location.pathname}
         />
         <section className="content bloglist">
             <div className="container">
-                <h1 className="bar">RECENT POSTS</h1>
+                <h1 className="bar">最新記事</h1>
 
                 <div className="posts">
                     {data.allContentfulBlogPost.edges.map(({node}) => (
@@ -28,7 +28,8 @@ export default ({data, location, pageContext}) => (
                                     style={{height: '100%'}} 
                                 />
                             </figure>
-                            <h3>{node.title}</h3>
+                            <p>{node.publishDate}</p>
+                            <h3 className='articleDate'>{node.title}</h3>
                             </Link>
                         </article>
                     ))}
@@ -73,6 +74,7 @@ export const query = graphql`
             edges {
                 node {
                     title
+                    publishDate(formatString: "YYYY-MM-DD")
                     id
                     slug
                     eyecatch {

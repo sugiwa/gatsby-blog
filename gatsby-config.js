@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'ESSENTIALS',
-    description: '美味しい食材と食事を探求するサイト',
+    title: 'Ryo Blog',
+    description: 'プログラミング関連について発信するサイト',
     lang: 'ja',
     siteUrl: `https://****.netlify.app`,
     locale: `ja_JP`,
@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ESSENTIALS エッセンシャルズ`,
-        short_name: `ESSENTIALS`,
+        name: `Ryo Blog`,
+        short_name: `Ryo Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#477294`,
@@ -46,5 +46,11 @@ module.exports = {
         host: `cdn.contentful.com`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-XXXXXXX-X`,
+      }
+    }
   ],
 }

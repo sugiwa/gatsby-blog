@@ -49,14 +49,6 @@ export default ({data, pageContext, location}) => (
             pageimgw={data.contentfulBlogPost.eyecatch.file.details.image.width}
             pageimgh={data.contentfulBlogPost.eyecatch.file.details.image.height}
         />
-        <div className="eyecatch">
-            <figure>
-                <Img 
-                    fluid={data.contentfulBlogPost.eyecatch.fluid} 
-                    alt={data.contentfulBlogPost.eyecatch.description}
-                />
-            </figure>
-        </div>
 
         <article className="content">
             <div className="container">
@@ -115,7 +107,7 @@ export const query = graphql`
     query($id: String!) {
         contentfulBlogPost(id: {eq: $id}) {
             title
-            publishDateJP: publishDate(formatString: "YYYY年MM月DD日")
+            publishDateJP: publishDate(formatString: "YYYY-MM-DD")
             publishDate
             category {
                 category

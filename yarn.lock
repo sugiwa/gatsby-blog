@@ -6479,6 +6479,19 @@ gatsby-page-utils@^0.2.27:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
+gatsby-plugin-analytics@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-analytics/-/gatsby-plugin-analytics-0.2.0.tgz#540765215adef8639760909a649833e86bc688b5"
+  integrity sha512-LHDbJLZI7M1P0iTVrVVJD1S0mtLK/VhqPTyFjTp5R19UYRGxIznCY2BuZ5cVJMRb0bRl0lnhVnPYek+udz8onA==
+
+gatsby-plugin-google-analytics@^2.3.17:
+  version "2.3.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.17.tgz#61207d253b69e8ab606ebff75e074c1774d108bb"
+  integrity sha512-0s8m2BPBBsccCIFE2rUl98Ir/JE273cyPwfFB1PrtNz6rVmbRrm8AWKJvGXlZiPAfMUuBhT39vCgTvrCDp4phw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    minimatch "3.0.4"
+
 gatsby-plugin-manifest@^2.4.34:
   version "2.4.34"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.34.tgz#3628df53ccf59e04e93eca397287484315fea715"
@@ -9493,7 +9506,7 @@ minimatch@3.0.3:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^3.0.3, minimatch@^3.0.4:
+minimatch@3.0.4, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==

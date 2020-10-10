@@ -1,55 +1,27 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faUtensils, faCheckSquare} from '@fortawesome/free-solid-svg-icons'
 import SEO from '../components/seo'
 
 export default ({data, location}) => (
     <Layout>
         <SEO 
-            pagetitle='ESSENTIALSについて'
-            pagedesc='食べ物についての情報を発信しているサイトです。'
+            pagetitle='Ryoについて'
+            pagedesc='プログラミングについての情報を発信しているサイトです。'
             pagepass={location.pathname}
-            pageimg={data.about.childImageSharp.original.src}
-            pageimgw={data.about.childImageSharp.original.width}
-            pageimgh={data.about.childImageSharp.original.height}
+            pageimg={data.icon.childImageSharp.original.src}
+            pageimgw={data.icon.childImageSharp.original.width}
+            pageimgh={data.icon.childImageSharp.original.height}
         />
-        <div className="eyecatch">
-            <figure>
-                <Img fluid={data.about.childImageSharp.fluid} alt="ブルーベリー＆ヨーグルト"/>
-            </figure>
-        </div>
 
         <article className="content">
             <div className="container">
-                <h1 className="bar">ESSENTIALSについて</h1>
-
-                <aside className="info">
-                    <div className="subtitle">
-                        <FontAwesomeIcon icon={faUtensils}/>
-                        ABOUT ESSENTIALS
-                    </div>
-                </aside>
+                <h1 className="bar">About me</h1>
 
                 <div className="postbody">
-                    <p>体に必要不可欠な食べ物についての情報を発信しているサイトです。「おいしい食材をおいしく食べる」をモットーにしています。特に力を入れているのが、フルーツ、穀物、飲み物の３つです。</p>
-
-                    <h2><FontAwesomeIcon icon={faCheckSquare} />公開している記事</h2>
-
-                    <p>これらについて、次のような記事やレシピなどを書いて公開しています。</p>
-
-                    <ul>
-                        <li>ヘルシーで美味しい料理の研究・レビュー・レシピ。</li>
-                        <li>一人でも、家族や友人と一緒にでも楽しめる料理。</li>
-                        <li>ユーザー間のオープンなコミュニケーションを基盤とした情報。</li>
-                    </ul>
-
-                    <h2><FontAwesomeIcon icon={faCheckSquare} />よく聞かれること</h2>
-
-                    <p>よく聞かれることなのですが、私たちはスタートアップではありません。私たちはまだスタートしたばかりで、より多くの人々が食べやすい食べ物がもたらす違いを発見できるように、成長しサービスを改善する機会を待っています。</p>
-
-                    <p>気長にお付き合いいただければ幸いです。</p>
+                    <Img fluid={data.icon.childImageSharp.fluid} style={{width:'200px',borderRadius:'100px',margin:'0 auto'}}/>
+                    <h4>Ryo</h4>
+                    <p>地方国立大学で情報工学を学んでいる大学生。最近はReact関連技術に興味を持っている。趣味は旅行や音楽。</p>
                 </div>
             </div>
         </article>
@@ -58,9 +30,9 @@ export default ({data, location}) => (
 
 export const query = graphql`
 query {
-    about: file(relativePath: {eq: "about.jpg"}) {
+    icon: file(relativePath: {eq: "icon.png"}) {
         childImageSharp {
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth:500) {
             ...GatsbyImageSharpFluid_withWebp
             }
             original {
