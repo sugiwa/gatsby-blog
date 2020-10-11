@@ -12,7 +12,7 @@ module.exports = {
     lang: 'ja',
     siteUrl: `https://****.netlify.app`,
     locale: `ja_JP`,
-    fbappid: `XXXXXXXXX`,
+    fbappid: `XXXXXXXX`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -49,7 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-XXXXXXX-X`,
+        trackingId: process.env.GATSBY_GOOGlE_ANALYTICS_TRACKING_ID,
+        head: true
       }
     }
   ],
