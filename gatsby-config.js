@@ -10,7 +10,7 @@ module.exports = {
     title: 'Ryo Blog',
     description: 'プログラミング関連について発信するサイト',
     lang: 'ja',
-    siteUrl: `https://****.netlify.app`,
+    siteUrl: `https://www.ryoblg.com`,
     locale: `ja_JP`,
     fbappid: `XXXXXXXX`,
   },
@@ -52,6 +52,7 @@ module.exports = {
         trackingId: process.env.GATSBY_GOOGlE_ANALYTICS_TRACKING_ID,
         head: true
       }
-    }
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }
