@@ -6,10 +6,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheckSquare, faClock, faFolderOpen} from '@fortawesome/free-regular-svg-icons'
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import {BLOCKS} from '@contentful/rich-text-types'
+import {BLOCKS, MARKS} from '@contentful/rich-text-types'
 import useContentfulImage from '../utils/useContentfulImage'
 import SEO from '../components/seo'
 import {documentToPlainTextString} from '@contentful/rich-text-plain-text-renderer'
+import Prism from '../components/prism'
 
 const options = {
     renderNode: {
@@ -35,6 +36,16 @@ const options = {
             return [...children, index > 0 && <br key={index} />, textSegment]
         }, [])
     },
+    renderMark: {
+        [MARKS.CODE]: text => {
+            for(let i=1; i<text.length; i++){
+                if(i%2 === 0){
+                    text[i] = '\n';
+                }
+            }
+            return <Prism>{text}</Prism>
+        }
+    }
 }
 
 export default ({data, pageContext, location}) => (

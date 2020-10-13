@@ -52,41 +52,6 @@ export default ({data}) => (
 
 export const query = graphql`
 query MyQuery {
-  hero: file(relativePath: {eq: "hero.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-  fruit: file(relativePath: {eq: "fruit.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 320) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-  grain: file(relativePath: {eq: "grain.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 320) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-  beverage: file(relativePath: {eq: "beverage.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 320) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-  berry: file(relativePath: {eq: "berry.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
   allContentfulBlogPost(
     sort: {order: DESC, fields: publishDate}
     skip: 0
