@@ -28,8 +28,10 @@ export default ({data, location, pageContext}) => (
                                     style={{height: '100%'}} 
                                 />
                             </figure>
-                            <p>{node.publishDate}</p>
-                            <h3 className='articleDate'>{node.title}</h3>
+                            <div className="postdescription">
+                                <p>{node.publishDate}</p>
+                                <h3 className='articleDate'>{node.title}</h3>
+                            </div>
                             </Link>
                         </article>
                     ))}

@@ -28,7 +28,10 @@ export default ({data, location, pageContext}) => (
                                     style={{height: '100%'}} 
                                 />
                             </figure>
-                            <h3>{node.title}</h3>
+                            <div className="postdescription">
+                                <p>{node.publishDate}</p>
+                                <h3>{node.title}</h3>
+                            </div>
                             </Link>
                         </article>
                     ))}
@@ -77,6 +80,7 @@ export const query = graphql`
             edges {
                 node {
                     title
+                    publishDate(formatString: "YYYY-MM-DD")
                     id
                     slug
                     eyecatch {

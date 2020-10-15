@@ -38,8 +38,10 @@ export default ({data}) => (
                               style={{height: '100%'}} 
                           />
                       </figure>
-                      <p>{node.publishDate}</p>
-                      <h3>{node.title}</h3>
+                      <div className="postdescription">
+                        <p>{node.publishDate}</p>
+                        <h3>{node.title}</h3>
+                      </div>
                       </Link>
                   </article>
               ))}

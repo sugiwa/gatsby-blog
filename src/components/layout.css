@@ -494,6 +494,11 @@ svg {
 	height: 70%;
 }
 
+.postdescription{
+	width: 90%;
+	margin: 0 auto;
+}
+
 .posts img {
 	height: 150px;
 	object-fit: cover;
