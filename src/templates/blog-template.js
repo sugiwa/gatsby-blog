@@ -33,6 +33,9 @@ export default ({data, location, pageContext}) => (
                             </Link>
                         </article>
                     ))}
+                    {(data.allContentfulBlogPost.totalCount%2 === 1) && (
+                        <article><figure></figure></article>
+                    )}
                 </div>
                 <ul className="pagenation">
                     {!pageContext.isFirst && (
@@ -85,6 +88,7 @@ export const query = graphql`
                     }
                 }
             }
+            totalCount
         }
     }
   

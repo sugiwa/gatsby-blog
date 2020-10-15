@@ -430,7 +430,7 @@ svg {
 
 /* 前後の記事へのリンク */
 .postlink {
-	margin-top: 4em;
+	margin: 4em 0;
 	list-style: none;
 	color: #477294;
 	font-size: 14px;
@@ -472,6 +472,10 @@ svg {
 }
 
 /* ブログ記事一覧 */
+.post{
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+}
+
 .posts {
 	display: flex;
 	flex-wrap: wrap;
