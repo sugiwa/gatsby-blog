@@ -4,9 +4,9 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheckSquare, faClock, faFolderOpen} from '@fortawesome/free-regular-svg-icons'
-import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
+import {faChevronLeft, faChevronRight, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import {BLOCKS, MARKS} from '@contentful/rich-text-types'
+import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
 import useContentfulImage from '../utils/useContentfulImage'
 import SEO from '../components/seo'
 import {documentToPlainTextString} from '@contentful/rich-text-plain-text-renderer'
@@ -29,7 +29,18 @@ const options = {
                         : node.data.target.fields.title["ja-JP"]
                 }
             />
-        )
+        ),
+        [INLINES.HYPERLINK]: (node, next) => {
+            console.log(node);
+            return(
+                <a href={node.data.uri} style={{color:'#2c91ec'}}>
+                    {next}
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </a>
+ 
+
+            )
+        }
     },
     renderText: text => {
         return text.split("\n").reduce((children, textSegment, index) => {
