@@ -1,10 +1,10 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import News from '../components/news'
 
-export default ({data}) => (
+export default () => (
   <Layout>
     <SEO />
 
@@ -13,44 +13,11 @@ export default ({data}) => (
         <h1 className="bar">Ryo Blogへようこそ</h1>
 
         <div className="details">
-          <p>このサイトはプログラミングを学習するなかで気付いたことやプログラムの記述方法をメモ代わりに残していく場所です。</p>
+          <p>このサイトではプログラミングを学習で役立つことやプログラムの記述方法を幅広く発信しています。</p>
         </div>
-
+        <News />
       </div>
     </section>
-
-    <section className="photo">
-      <h2 className="sr-only">Photo</h2>
-      <figure>
-      </figure>
-    </section>
-    <section className="content bloglist">
-      <div className="container">
-          <h2 className='bar'>最新記事</h2>
-          <div className="posts">
-              {data.allContentfulBlogPost.edges.map(({node}) => (
-                  <article className="post" key={node.id}>
-                      <Link to={`/blog/post/${node.slug}`}>
-                      <figure>
-                          <Img 
-                              fluid={node.eyecatch.fluid} 
-                              alt={node.eyecatch.description}
-                              style={{height: '100%'}} 
-                          />
-                      </figure>
-                      <div className="postdescription">
-                        <p>{node.publishDate}</p>
-                        <h3>{node.title}</h3>
-                      </div>
-                      </Link>
-                  </article>
-              ))}
-              {(data.allContentfulBlogPost.totalCount%2 === 1) && (
-                  <article><figure></figure></article>
-              )}
-          </div>
-      </div>
-      </section>
   </Layout>
 )
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import SEO from '../components/seo'
+import News from '../components/news'
 
 export default ({data, location}) => (
     <Layout>
@@ -21,8 +22,10 @@ export default ({data, location}) => (
                 <div className="postbody">
                     <Img fluid={data.icon.childImageSharp.fluid} style={{width:'200px',borderRadius:'100px',margin:'0 auto'}}/>
                     <h4>Ryo</h4>
-                    <p>地方国立大学で情報工学を学んでいる大学生。最近はReact関連技術に興味を持っている。趣味は旅行や音楽。</p>
+                    <p>地方国立大学で情報工学を学んでいる大学生。最近はReact関連技術に興味を持っている。趣味は旅行や音楽。何かあれば気軽にご連絡ください。</p>
+                    <a href='https://twitter.com/waka_pre'>Twitter</a>
                 </div>
+                <News />
             </div>
         </article>
     </Layout>

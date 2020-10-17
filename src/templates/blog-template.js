@@ -15,7 +15,7 @@ export default ({data, location, pageContext}) => (
         />
         <section className="content bloglist">
             <div className="container">
-                <h1 className="bar">最新記事</h1>
+                <h1 className="bar">記事一覧</h1>
 
                 <div className="posts">
                     {data.allContentfulBlogPost.edges.map(({node}) => (
@@ -30,7 +30,7 @@ export default ({data, location, pageContext}) => (
                             </figure>
                             <div className="postdescription">
                                 <p>{node.publishDate}</p>
-                                <h3 className='articleDate'>{node.title}</h3>
+                                <h3>{node.title}</h3>
                             </div>
                             </Link>
                         </article>

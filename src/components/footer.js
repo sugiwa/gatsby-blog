@@ -15,5 +15,6 @@ export default () =>(
                 </li>
             </ul>
         </div>
+        <p>© 2020 Ryo</p>
     </footer>
 )
