@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-okaidia.css'
 
 export default ({langname, children}) => {
   useEffect(() => {
-    console.log(Prism.highlightAll());
     Prism.highlightAll()
   })
 
   return (
-    <pre className='line-numbers'>
+    <pre>
       <code className={`language-${langname}`}>
         {children}
       </code>

@@ -32,7 +32,6 @@ const options = {
             />
         ),
         [INLINES.HYPERLINK]: (node, next) => {
-            console.log(node);
             return(
                 <a href={node.data.uri} style={{color:'#2c91ec'}}>
                     {next}
