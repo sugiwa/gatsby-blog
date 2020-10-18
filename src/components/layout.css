@@ -325,7 +325,6 @@ svg {
 /* コンテンツ */
 .content {
 	padding-top: 50px;
-	padding-bottom: 40px;
 }
 
 .content .container {
@@ -365,7 +364,7 @@ svg {
 @media (min-width: 768px) {
 	.content {
 		padding-top: 70px;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 	}
 
 	.content h1 {
@@ -468,6 +467,13 @@ svg {
 /* ブログ記事一覧 */
 .newsframe{
 	padding-top: 90px;
+}
+
+.allpost {
+	padding: 5% ;
+	margin-top: 15px;
+	border:0.5px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
 }
 
 .post{

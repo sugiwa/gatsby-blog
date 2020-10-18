@@ -50,9 +50,7 @@ export default () =>{
                         </Link>
                     </article>
                 ))}
-                {(data.allContentfulBlogPost.totalCount%2 === 1) && (
-                    <article><figure></figure></article>
-                )}
+                <Link to={"/blog"} className="allpost">記事一覧を見る</Link>
             </div>
         </div>
     )
