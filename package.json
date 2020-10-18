@@ -1,7 +1,7 @@
 {
-  "name": "Ryo Blog",
+  "name": "gatsby-starter-hello-world",
   "private": true,
-  "description": "プログラミング学習に役立つ情報を発信中",
+  "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
