@@ -35,7 +35,7 @@ export default ({data, location, pageContext}) => (
                             </Link>
                         </article>
                     ))}
-                    {(data.allContentfulBlogPost.totalCount%2 === 1) && (
+                    {(data.allContentfulBlogPost.totalCount%2 === 1) && (pageContext.isLast) && (
                         <article><figure></figure></article>
                     )}
                 </div>
