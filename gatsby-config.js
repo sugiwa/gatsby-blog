@@ -3,7 +3,8 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
+require("dotenv").config()
+ 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -42,15 +43,15 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `yogly1cmx2lv`,
-        accessToken: `URY2Q5qGFRJDmRWcUCgtRu8iskBMdfsBUkkB1TBeaas`,
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
         host: `cdn.contentful.com`,
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-180203806-1`,
+        trackingId: process.env.TRACKING_ID,
         head: true
       }
     },
