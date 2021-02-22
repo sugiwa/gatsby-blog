@@ -41,6 +41,7 @@ export default props => {
             <title>{title}</title>
             <meta name='description' content={description} />
             <link rel='canonial' href={url} />
+            <script data-ad-client="ca-pub-6816833508313782" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
             <meta property='og:site_name' conten={data.site.siteMetadata.title} />
             <meta property='og:title' content={title} />
