@@ -22,7 +22,9 @@ export default ({data, location}) => (
                 <div className="postbody">
                     <Img fluid={data.icon.childImageSharp.fluid} style={{width:'200px',borderRadius:'100px',margin:'0 auto'}}/>
                     <h4>Ryo</h4>
-                    <p>地方国立大学で情報工学を学んでいる大学生。最近はReact関連技術に興味を持っている。趣味は旅行や音楽。何かあれば気軽にご連絡ください。</p>
+                    <p>
+                        地方国立大学で情報工学を学んでいる大学生。興味の赴くままに開発をしている。趣味は旅行や音楽。
+                    </p>
                     <a href='https://twitter.com/waka_pre'>Twitter</a>
                 </div>
                 <News />

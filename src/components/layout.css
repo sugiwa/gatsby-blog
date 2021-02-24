@@ -339,13 +339,19 @@ svg {
 .postbody > * {
 	margin-bottom: 1em;
 }
+
+.postbody h2{
+	padding-left: 10px;
+	border-left: ridge 7px rgba(17, 173, 245, 0.623);
+}
+
 .postbody h4{
 	font-size: 150%;
 	text-align: center;
 }
 
 .postbody p {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	line-height: 1.8;
 }
 .postbody ul {

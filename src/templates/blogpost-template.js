@@ -15,12 +15,12 @@ import News from '../components/news'
 
 const options = {
     renderNode: {
-        [BLOCKS.HEADING_2]: (node, children) => (
-            <h2>
-                <FontAwesomeIcon icon={faCheckSquare} />
-                {children}
-            </h2>
-        ),
+        // [BLOCKS.HEADING_2]: (node, children) => (
+        //     <h2>
+        //         <FontAwesomeIcon icon={faCheckSquare} />
+        //         {children}
+        //     </h2>
+        // ),
         [BLOCKS.EMBEDDED_ASSET]: node => (
             <Img 
                 fluid={useContentfulImage(node.data.target.fields.file["ja-JP"].url)}
