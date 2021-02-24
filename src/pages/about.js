@@ -25,7 +25,6 @@ export default ({data, location}) => (
                     <p>
                         地方国立大学で情報工学を学んでいる大学生。興味の赴くままに開発をしている。趣味は旅行や音楽。
                     </p>
-                    <a href='https://twitter.com/waka_pre'>Twitter</a>
                 </div>
                 <News />
             </div>
