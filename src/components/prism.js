@@ -5,6 +5,7 @@ import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-powershell'
 import 'prismjs/components/prism-git'
+import 'prismjs/components/prism-ruby'
 
 export default ({langname, children}) => {
   useEffect(() => {
